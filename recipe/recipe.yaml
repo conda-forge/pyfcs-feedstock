@@ -12,7 +12,7 @@ source:
   sha256: 847de6c0becfe8b82603a0fc5297d0089be8925891fa38c4ef88baf7acc82419
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
@@ -43,7 +43,7 @@ tests:
         - pyFCS
       pip_check: true
   - script:
-    - python -m pytest tests/test_pyFCS.py
+      - python -m pytest tests/test_pyFCS.py
     files:
       source:
         - tests/
